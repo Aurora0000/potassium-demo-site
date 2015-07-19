@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iodine</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.1/semantic.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.1/semantic.min.js"></script>
+    <style>
+        .main.menu.borderless.secondary {
+            opacity: 1;
+            background-color: black;
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+        .masthead.segment {
+            min-height: 450px;
+            padding: 1em 0em;
+        }
+
+        .masthead h1.inverted.header {
+            font-size: 4em;
+        }
+
+        .masthead h2 {
+            font-size: 2.25em;
+            color: #bdc3c7;
+        }
+
+        .masthead .ui.container {
+            padding: 3em 0em 3em 0em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui segments">
+        <div class="ui fixed inverted borderless secondary pointing main menu">
+            <div class="header item">
+                Iodine
+            </div>
+            <a href="index.html" class="item active">
+                Home
+            </a>
+            <a href="features.html" class="item">
+                Features
+            </a>
+            <a class="item">
+                Tutorials
+            </a>
+        </div>
+
+        <div class="ui inverted vertical masthead center aligned segment">
+            <div class="ui text container">
+                <h1 class="ui inverted header">
+                    Iodine
+                    <div class="ui blue label">v1.0.1</div>
+                </h1>
+                <h2>
+                    <p>
+                        The language for
+                        <em id="iodine-uses">rapid programming</em>.
+                    </p>
+
+                    <div class="ui floating primary large icon dropdown button">
+                        <i class="cloud download icon"></i>
+                        <span class="text">Download</span>
+                        <div class="menu">
+                            <div class="header">
+                                <i class="download icon"></i> Versions
+                            </div>
+                            <div class="divider"></div>
+                            <a href="https://github.com/IodineLang/Iodine/releases" class="item primary">
+			                    Stable <div class="ui label small blue">Recommended</div>
+			                </a>
+                            <a href="https://github.com/IodineLang/Iodine/archive/master.zip" class="item">
+                			    Nightly (master branch)
+			                </a>
+                        </div>
+                    </div>
+                    <a class="ui large orange button" href="https://github.com/IodineLang/Iodine">
+                        <i class="github square icon"></i> Source Code
+                    </a>
+                    <br />
+                    <br />
+                </h2>
+            </div>
+        </div>
+
+        <div class="ui blue inverted segment">
+            <div class="ui container">
+                <div class="ui grid">
+                    <div class="six wide column">
+                        <i class="huge circular fire icon"></i>
+                    </div>
+                    <div class="ten wide column">
+                        <div class="ui text container">
+                            <h1>Rapid Development</h1>
+                            <p>
+                                No need to wait months for that one feature you've been hoping for - Iodine gets new features all the time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui purple inverted segment">
+            <div class="ui container">
+                <div class="ui grid">
+                    <div class="six wide column">
+                        <i class="huge circular lab icon"></i>
+                    </div>
+                    <div class="ten wide column">
+                        <div class="ui text container">
+                            <h1>All your favourite syntactic sugar</h1>
+                            <p>
+                                Iodine feels natural to most people; if you've ever used Python, Ruby, PHP, or even C#, you'll see similarities and quickly pick up Iodine.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui teal inverted segment" id="main-menu-anchor">
+            <div class="ui container">
+                <div class="ui grid">
+                    <div class="six wide column">
+                        <i class="huge circular book icon"></i>
+                    </div>
+                    <div class="ten wide column">
+                        <div class="ui text container">
+                            <h1>Powerful libraries</h1>
+                            <p>
+                                The Iodine ecosystem is growing by the minute, and accessing packages couldn't be easier. With
+                                <a href="https://github.com/IodineLang/Ion">Ion
+								</a>, it's simply a case of one command, and you're done!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui green inverted segment">
+            <div class="ui container">
+                <div class="ui grid">
+                    <div class="six wide column">
+                        <i class="huge circular announcement icon"></i>
+                    </div>
+                    <div class="ten wide column">
+                        <div class="ui text container">
+                            <h1>Friendly community</h1>
+                            <p>
+                                Iodine's developers and users are a friendly bunch - they'll be happy to help you if you've got a problem or a bug.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui segment">
+            <div class="ui container">
+                <div class="ui grid">
+                    <div class="six wide column">
+                        <script src="https://gist.github.com/Aurora0000/63fb9eb703bcaa52340e.js"></script>
+                    </div>
+                    <div class="ten wide column">
+                        <h2>Convinced?</h2>
+                        <p>
+                            Take a look at the simple "Hello, world" code in Iodine. Pretty simple, right? Already, you should start to spot features that you're used to:
+                        </p>
+                        <ul>
+                            <li>
+                                String Interpolation, like in C# and Python.
+                            </li>
+                            <li>
+                                A print function, like Python.
+                            </li>
+                            <li>
+                                A main function, like in C#
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui segment">
+            <div class="ui container">
+                <div class="ui grid">
+                    <div class="ten wide column">
+                        <h2>Still not clicked download?</h2>
+                        <p>
+                            You're getting tough to convince. Perhaps taking a look at Iodine's powerful object-oriented programming features will help?
+                        </p>
+                        <p>
+                            At first, you quickly notice the self keyword, which Pythonistas should be familiar with. If you're not familiar with it, self is used to make the function a class method, as opposed to a static method. Then, you can access the class through self (just
+                            like C#'s this keyword).
+                        </p>
+                        <p>
+                            You can also see the super() function, which is used to call the parent class' constructor (which shares the name of the class, like in C#). Even if the parent class has no constructor, you still need super (), or else the class won't actually inherit.
+                        </p>
+                        <p>
+                            Did we mention that semi-colons are optional? If you prefer to omit them, Iodine has no trouble with that. Cool, eh?
+                        </p>
+                    </div>
+                    <div class="six wide column">
+                        <script src="https://gist.github.com/Aurora0000/00e1acd4105041819632.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui segment">
+            <div class="ui container">
+                <div class="ui grid">
+                    <div class="eight wide centered column">
+                        <h2>One last thing...</h2>
+                        <p>
+                            This site is hosted and powered by Potassium, an
+                            Iodine-based web server. If you've ever tried Django
+                            or Ruby on Rails, you'll love Potassium and the
+                            Iodine ecosystem! So, why not go back to the top and
+                            try out Iodine today, free of charge, and free as in
+                            freedom.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var iodineUses = [
+            "web developers",
+            "Python lovers",
+            "pushing boundaries",
+            "innovation",
+            "Ion",
+            "Iodinium",
+            "cliched chemical names",
+            "your next project"
+        ];
+        var i = -1;
+        window.setInterval(function() {
+            i++;
+            if (i >= iodineUses.length) {
+                i = 0;
+            }
+            $("#iodine-uses").transition({
+                animation: "slide down",
+                onComplete: function() {
+                    $("#iodine-uses").text(iodineUses[i]).transition("slide down");
+                }
+            });
+        }, 7500);
+        $(".dropdown").dropdown({
+            transition: "drop"
+        });
+    </script>
+</body>
+
+</html>
