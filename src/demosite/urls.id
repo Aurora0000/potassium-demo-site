@@ -1,0 +1,10 @@
+use potassium.router;
+
+use HomePageView from .views;
+
+func getRoutes () {
+    urlList = List ();
+    urlList.add(router.URLItem("/", HomePageView ()));
+    urlSpec = router.URLSpec(urlList, "/");
+    return urlSpec;
+}

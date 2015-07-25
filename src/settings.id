@@ -1,0 +1,30 @@
+use os;
+
+use Settings from potassium.settings;
+
+func configure () {
+    Settings.init ();
+
+    # Set any global settings here.
+
+    # The MySQL connection string to your application's database. Parameters:
+    # Server=example.com - use localhost if the database shares the same server.
+    # Port=12345 - Default is 3306, you don't have to include it if you're using
+    #              this port.
+    # SslMode=Preferred/Required - Use this if your MySQL connection requires
+    #                              SSL. If you're expecting SSL, *choose required*!
+    # Uid=myuser - Username to connect with. Using root is a poor idea in
+    #              production. Admissible for testing purposes though.
+    # Pwd=fake - Password to connect with. Strong passwords are almost always
+    #            better.
+    # For more arcane settings, visit:
+    # https://www.connectionstrings.com/mysql-connector-net-mysqlconnection/
+    # It is recommended by some to store your data in environment variables. To
+    # do this, comment out the default code below and uncomment this (put the
+    # data in the environment variable POTASSIUM_CSTR):
+
+    # Settings.set ("database_connectionString", os.getEnv ("POTASSIUM_CSTR"));
+
+    Settings.set ("connectionString", "Server=localhost;Database=test;Uid=root;Pwd=secret;");
+    Settings.set ("templateDir", "src/templates");
+}

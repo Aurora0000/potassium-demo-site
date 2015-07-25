@@ -1,0 +1,36 @@
+#!/usr/bin/iodine
+use os;
+use reflection;
+
+use potassium.auth;
+use potassium.router;
+use potassium.settings;
+
+use .demosite.urls;
+use .settings;
+
+func main (args) {
+    settings.configure ();
+
+    if (args.getSize () == 1) {
+        if (args [0] == "migrate") {
+            auth.Auth ().migrate ();
+            print ("Success.");
+            return;
+        }
+        else if (args [0] == "createsuperuser") {
+            print ("Enter username: ");
+            uname = input ();
+            print ("Enter password: ");
+            passwd = input ();
+            print ("Enter email: ");
+            email = input ();
+            auth.Auth ().createSuperUser (uname, passwd, email);
+            print ("Success.");
+            return;
+        }
+    }
+    routes = urls.getRoutes ();
+    appRouter = router.Router (routes, os.getEnv ("PATH_INFO"));
+    appRouter.run ();
+}

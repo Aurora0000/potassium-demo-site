@@ -1,0 +1,14 @@
+use View from potassium.views;
+use potassium.response;
+use potassium.request;
+use Settings from potassium.settings;
+
+class HomePageView : View {
+    func HomePageView (self) {
+        super ();
+    }
+
+    func get (self, req) {
+        return response.TemplateResponse ("src/templates/index.html", HashMap ());
+    }
+}

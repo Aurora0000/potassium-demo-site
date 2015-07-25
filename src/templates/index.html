@@ -3,9 +3,7 @@
 
 <head>
     <title>Iodine</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.1/semantic.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.1/semantic.min.js"></script>
+    {% include ("libs.html") %}
     <style>
         .main.menu.borderless.secondary {
             opacity: 1;
@@ -35,20 +33,9 @@
 
 <body>
     <div class="ui segments">
-        <div class="ui fixed inverted borderless secondary pointing main menu">
-            <div class="header item">
-                Iodine
-            </div>
-            <a href="index.html" class="item active">
-                Home
-            </a>
-            <a href="features.html" class="item">
-                Features
-            </a>
-            <a class="item">
-                Tutorials
-            </a>
-        </div>
+        {%
+            include ("header.html", HashMap ({("activeSection", "home")}))
+        %}
 
         <div class="ui inverted vertical masthead center aligned segment">
             <div class="ui text container">
@@ -87,78 +74,36 @@
             </div>
         </div>
 
-        <div class="ui blue inverted segment">
-            <div class="ui container">
-                <div class="ui grid">
-                    <div class="six wide column">
-                        <i class="huge circular fire icon"></i>
-                    </div>
-                    <div class="ten wide column">
-                        <div class="ui text container">
-                            <h1>Rapid Development</h1>
-                            <p>
-                                No need to wait months for that one feature you've been hoping for - Iodine gets new features all the time.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="ui purple inverted segment">
-            <div class="ui container">
-                <div class="ui grid">
-                    <div class="six wide column">
-                        <i class="huge circular lab icon"></i>
-                    </div>
-                    <div class="ten wide column">
-                        <div class="ui text container">
-                            <h1>All your favourite syntactic sugar</h1>
-                            <p>
-                                Iodine feels natural to most people; if you've ever used Python, Ruby, PHP, or even C#, you'll see similarities and quickly pick up Iodine.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {%  include ("index-segment.html", HashMap ({
+                ("colour", "blue"),
+                ("icon", "fire"),
+                ("header", "Rapid Development"),
+                ("text", "No need to wait months for that one feature you've been hoping for - Iodine gets new features all the time.")
+            }))
 
-        <div class="ui teal inverted segment" id="main-menu-anchor">
-            <div class="ui container">
-                <div class="ui grid">
-                    <div class="six wide column">
-                        <i class="huge circular book icon"></i>
-                    </div>
-                    <div class="ten wide column">
-                        <div class="ui text container">
-                            <h1>Powerful libraries</h1>
-                            <p>
-                                The Iodine ecosystem is growing by the minute, and accessing packages couldn't be easier. With
-                                <a href="https://github.com/IodineLang/Ion">Ion
-								</a>, it's simply a case of one command, and you're done!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            include ("index-segment.html", HashMap ({
+                ("colour", "purple"),
+                ("icon", "lab"),
+                ("header", "All your favourite syntactic sugar"),
+                ("text", "Iodine feels natural to most people; if you've ever used Python, Ruby, PHP, or even C#, you'll see similarities and quickly pick up Iodine.")
+            }))
 
-        <div class="ui green inverted segment">
-            <div class="ui container">
-                <div class="ui grid">
-                    <div class="six wide column">
-                        <i class="huge circular announcement icon"></i>
-                    </div>
-                    <div class="ten wide column">
-                        <div class="ui text container">
-                            <h1>Friendly community</h1>
-                            <p>
-                                Iodine's developers and users are a friendly bunch - they'll be happy to help you if you've got a problem or a bug.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            include ("index-segment.html", HashMap ({
+                ("colour", "teal"),
+                ("icon", "book"),
+                ("header", "Powerful libraries"),
+                ("text", "The Iodine ecosystem is growing by the minute, and accessing packages "
+                       + "couldn't be easier. With <a href=\"https://github.com/IodineLang/Ion\">"
+                       + "Ion</a>, it's simply a case of one command, and you're done!")
+            }))
+
+            include ("index-segment.html", HashMap ({
+                ("colour", "green"),
+                ("icon", "announcement"),
+                ("header", "Friendly community"),
+                ("text", "Iodine's developers and users are a friendly bunch - they'll be happy to help you if you've got a problem or a bug.")
+            }))
+        %}
         <div class="ui segment">
             <div class="ui container">
                 <div class="ui grid">

@@ -1,0 +1,25 @@
+{%
+    func activeIf (loc) {
+        if (activeSection == loc) {
+            append ("active")
+        }
+    }
+%}
+
+<div class="ui fixed inverted borderless secondary pointing main menu">
+    <div class="header item">
+        Iodine
+    </div>
+    <a href="index" class="item {% activeIf ("home") %}">
+        Home
+    </a>
+    <a href="tutorials" class="item {% activeIf ("tutorials") %}">
+        Tutorials
+    </a>
+    <a href="https://github.com/IodineLang/Iodine/tree/master/docs" class="item {% activeIf ("documentation") %}">
+        Documentation / Reference
+    </a>
+    <a href="showcase" class="item {% activeIf ("showcase") %}">
+        Showcase
+    </a>
+</div>
